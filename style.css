@@ -1,5 +1,7 @@
 body {
-  padding: 20px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  padding-top: 10vh;
 }
 
 h1, h2, h3, h4 {
@@ -7,8 +9,13 @@ h1, h2, h3, h4 {
   color: "black";
 }
 
-h1, h2 {
+h1 {
   font-weight: normal;
+  font-size: 30px;
+}
+
+h2 {
+  padding: none;
   font-size: 35px;
 }
 
@@ -20,10 +27,20 @@ h4 {
 }
 
 p {
+  padding: none;
   font-family: 'PT Serif', sans-serif;
-  font-size: 35px; /* Change the font size */
-  color: "grey";
+  font-size: 30px; /* Change the font size */
 }
+
+.project-text {
+  font-weight: normal;
+  color: grey;
+}
+
+::selection {
+  background-color: red;
+}
+
 
 .red-underline {
   text-decoration: underline;
@@ -31,10 +48,15 @@ p {
   text-decoration-thickness: 5px; /* Adjust the thickness of the underline */
 }
 
+
 .blue-underline {
   text-decoration: underline;
   text-decoration-color: blue; /* Change the color of the underline */
   text-decoration-thickness: 5px; /* Adjust the thickness of the underline */
+}
+.blue-underline a {
+  text-decoration-color: blue;
+  color: black;
 }
 
 .green-underline {
@@ -42,15 +64,51 @@ p {
   text-decoration-color: green; /* Change the color of the underline */
   text-decoration-thickness: 5px; /* Adjust the thickness of the underline */
 }
+.expanded {
+  max-height: none;
+}
+
+/* Style for Projects section */
+.projects {
+  display: flex;
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+  flex-direction: column; /* Arrange items in a column */
+}
+
+.project1,
+.project2 {
+  width: 100%;
+  height: 100vh;
+}
+
+.project1 {
+  padding-top: 10vh;
+}
+
+/* Style for the project gifs */
+.gif-container {
+  display: flex;
+  justify-content: center;
+}
+
+.styled-gif {
+  width: 60vw; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add border radius for rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
+  margin: 10px; /* Add some margin */
+}
 
 /* Style for contact section */
 .contact {
-  padding-top: 20vh;
-  padding-bottom: 20vh;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Horizontally center items */
+  align-items: center; /* Vertically center items */
+  flex-direction: column; /* Arrange items in a column */
 }
+
 
 .email {
   text-align: center;
@@ -71,6 +129,6 @@ p {
 }
 
 .ContactIcons img {
-  width: 40px; /* Adjust the size of the icons */
+  width: 50px; /* Adjust the size of the icons */
   height: auto; /* Maintain aspect ratio */
 }

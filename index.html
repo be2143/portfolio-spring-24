@@ -8,14 +8,28 @@
 </head>
 <body>
   <header>
-    <h1>Hi, I'm <span class="red-underline">Buka</span>. I am a Computer Science and Interactive Media <br> student at NYU Abu Dhabi. I am passionate about <span id="dynamicText">Software Engineering</span>; <br><span class="green-underline">read more</span> or <span class="blue-underline">contact me</span>.</h1>
-  </header>  
+    <h1 id="headerText">Hi, I'm 
+      <span class="red-underline">Buka</span>. 
+      I am a Computer Science and Interactive Media <br> student at NYU Abu Dhabi. I am passionate about 
+      <span id="dynamicText">Software Engineering</span>; <br>
+      <span id="readMore" class="green-underline">read more</span> or 
+      <span class="blue-underline"><a href="#contact">contact me</a></span>.
+    </h1>
+    <p id="moreAbout" style="display: none;">Skills: <br>
+      <a href="link to resume" style="color: black;">Resume</a>
+    </p>
+  </header>
   <section class="projects">
     <div class="project1">
-      <h2>Project 1</h2>
-      <p>Project Description</p>
+      <div class="gif-container">
+        <img src="images/project1.gif" alt="Project 1 Image" class="styled-gif">
+      </diV>
+      <h2>Fin or Fate<br><span class="project-text">Design and Development for an interactive virtual comic.</span></h2>
     </div>
     <div class="project2">
+      <div class="gif-container">
+        <img src="images/project1.gif" alt="Project 2 Image" class="styled-gif">
+      </diV>
       <h2>Project 2</h2>
       <p>Project Description</p>
     </div>
@@ -23,9 +37,9 @@
   <section class="contact">
     <div class="email">
       <h3>let's get in touch!</h3>
-      <h4>be2143@nyu.edu</h4>
+      <h4><a href="mailto:be2143@nyu.edu" style="text-decoration: none; color: black;">be2143@nyu.edu</a></h4>
     </div>
-    <div class="ContactIcons">
+    <div id="contact" class="ContactIcons">
         <a href="https://www.linkedin.com/in/buka-e/" target="_blank"><img src="images/linkedin.png" alt="Contact 1"></a>
         <a href="https://github.com/buka-e" target="_blank"><img src="images/github.png" alt="Contact 2"></a>
         <a href="https://instagram.com/buka3018/" target="_blank"><img src="images/instagram.png" alt="Contact 3"></a>
@@ -34,6 +48,8 @@
   <footer>
     <!-- <p>This site is an ongoing archive of my work. No trackers or analytics are being used.</p> -->
   </footer>
+  <!-- Container for circles -->
+  <div id="circle-container"></div>
   <script src="script.js" defer></script>
 </body>
 </html>
