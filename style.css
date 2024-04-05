@@ -1,12 +1,19 @@
-body {
-  background-color: white;
-}
 /* Font */
 @font-face {
   font-family: 'Just Me Again Down Here';
   src: url('fonts/JustMeAgainDownHere-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
+}
+
+body {
+  background-color: white;
+}
+
+.about,
+.projects,
+.contact {
+  padding-left: 10vw; /* Adjust as needed to ensure content is below the header */
 }
 
 /* ***************************************************************************** */
@@ -49,6 +56,87 @@ header {
   margin-top: -50px;
   margin-bottom: -40px; /* Move the logo up slightly */
 }
+/* ***************************************************************************** */
+/* Style for About section */
+.about {
+  justify-content: center;
+  padding-top: 20vh;
+  padding-left: 20vw;
+  padding-right: 40vw;
+}
+
+.introduction {
+  margin-bottom: 50px;
+}
+.introduction p {
+  font-size: 25px;
+}
+
+#downloadLink {
+  /* Text color */
+  color: black; /* Example color */
+
+  /* Background color */
+  background-color: rgb(245, 245, 240); /* Example color */
+  
+  /* Padding */
+  padding: 10px 20px; /* Adjust padding as needed */
+  
+  /* Border */
+  border: 2px solid rgb(245, 245, 240); /* Example border color */
+  border-radius: 10px; /* Rounded corners */
+  
+  /* Text decoration */
+  text-decoration: none; /* Remove underline */
+  
+  /* Hover effect */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+#downloadLink:hover {
+  background-color: rgb(245, 245, 240); /* Example color */
+  border-color: #0056b3; /* Example border color */
+}
+
+.skills {
+  margin-top: 100px; /* Adjust the margin as needed */
+}
+
+.SkillsIcons {
+  display: flex; /* Use flexbox */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.SkillsIcons p {
+  /* Text color */
+  color: #ffffff; /* Example color */
+
+  /* Background color */
+  background-color: #007bff; /* Example color */
+  
+  /* Padding */
+  padding: 5px 10px; /* Adjust padding as needed */
+  
+  /* Border */
+  border: 2px solid #007bff; /* Example border color */
+  border-radius: 5px; /* Rounded corners */
+  
+  /* Margin between skill items */
+  margin-right: 10px; /* Adjust margin as needed */
+  margin-bottom: 10px; /* Adjust margin as needed */
+  
+  /* Text decoration */
+  text-decoration: none; /* Remove underline */
+  
+  /* Hover effect */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.SkillsIcons p:hover {
+  background-color: #0056b3; /* Example color */
+  border-color: #0056b3; /* Example border color */
+}
+
 
 /* ***************************************************************************** */
 /* Style for contact section */
@@ -86,23 +174,36 @@ h4 {
 .ContactIcons img {
   width: 50px; /* Adjust the size of the icons */
   height: auto; /* Maintain aspect ratio */
+  transition: transform 0.3s ease; /* Add transition for hover effect */
 }
-
-
+.ContactIcons img:hover {
+  transform: scale(1.1); /* Scale the icon on hover for a subtle effect */
+}
 /* ***************************************************************************** */
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-  .LandingPage {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 30px;
+  }
+
+  .about,
+  .projects,
+  .contact {
+    padding-top: 10vh; /* Adjust as needed to ensure content is below the header */
+    padding-left: 0;
   }
 
   header {
     width: 100vw;
     height: 5vh;
     padding: 10px; /* Adjust padding for better spacing */
-    align-items: space-between;
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Align items to the start and end */
+    align-items: center; /* Vertically center items */
   }
 
   .Logo {
@@ -110,14 +211,13 @@ h4 {
   }
 
   .NavigationBar {
-    display: flex;
-    flex-direction: row;
-    margin-right: 10px; /* Add some space from the right */
+    display: flex; /* Use flexbox */
+    flex-direction: row; /* Arrange items in a row */
   }
 
   .NavigationBar a {
     text-decoration: none;
-    margin-left: 20px; /* Add space between links */
+    margin-right: 20px; /* Add space between links */
     color: black;
   }
 }
