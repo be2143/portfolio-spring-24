@@ -1,106 +1,67 @@
 body {
-  padding-left: 20vw;
-  padding-right: 20vw;
-  padding-top: 10vh;
+  background-color: white;
+}
+/* Font */
+@font-face {
+  font-family: 'Just Me Again Down Here';
+  src: url('fonts/JustMeAgainDownHere-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-h1, h2, h3, h4 {
+/* ***************************************************************************** */
+/* Style for the Landing Page section */
+header {
+  top: 0;
+  left: 0;
+  position: fixed; /* Set the position to fixed */
+  width: 5vw;
+  height: 100%;
+  background-color: rgb(245, 245, 240);
+  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+  padding: 20px; /* Add padding around the items inside the header */
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Set the direction to column */
+  align-items: center; /* Center horizontally */
+}
+
+/* Style for the NavigationBar */
+.NavigationBar {
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Change the direction to column */
+  font-family: 'PT Serif', sans-serif;
+  font-size: 12px;
+  margin-top: 20px; /* Adjust the margin to create space between the logo and navigation bar */
+}
+
+/* Remove margin-right for the links */
+.NavigationBar a {
+  text-decoration: none; /* Remove underlines from links */
+  margin-bottom: 10px; /* Add some spacing between links */
+  color: black; /* Set the text color */
+}
+
+/* Style for the Name */
+.Logo {
+  font-family: 'Just Me Again Down Here';
+  font-size: 120px; /* Adjust the font size */
+  font-weight: bold; /* Make the text bold */
+  margin-top: -50px;
+  margin-bottom: -40px; /* Move the logo up slightly */
+}
+
+/* ***************************************************************************** */
+/* Style for contact section */
+h3, h4 {
   font-family: 'PT Serif', sans-serif;
   color: "black";
 }
-
-h1 {
-  font-weight: normal;
-  font-size: 30px;
-}
-
-h2 {
-  padding: none;
-  font-size: 35px;
-}
-
 h3 {
   font-size: 30px;
 }
 h4 {
   font-size: 50px;
 }
-
-p {
-  padding: none;
-  font-family: 'PT Serif', sans-serif;
-  font-size: 30px; /* Change the font size */
-}
-
-.project-text {
-  font-weight: normal;
-  color: grey;
-}
-
-::selection {
-  background-color: red;
-}
-
-
-.red-underline {
-  text-decoration: underline;
-  text-decoration-color: red; /* Change the color of the underline */
-  text-decoration-thickness: 5px; /* Adjust the thickness of the underline */
-}
-
-
-.blue-underline {
-  text-decoration: underline;
-  text-decoration-color: blue; /* Change the color of the underline */
-  text-decoration-thickness: 5px; /* Adjust the thickness of the underline */
-}
-.blue-underline a {
-  text-decoration-color: blue;
-  color: black;
-}
-
-.green-underline {
-  text-decoration: underline;
-  text-decoration-color: green; /* Change the color of the underline */
-  text-decoration-thickness: 5px; /* Adjust the thickness of the underline */
-}
-.expanded {
-  max-height: none;
-}
-
-/* Style for Projects section */
-.projects {
-  display: flex;
-  justify-content: center; /* Horizontally center items */
-  align-items: center; /* Vertically center items */
-  flex-direction: column; /* Arrange items in a column */
-}
-
-.project1,
-.project2 {
-  width: 100%;
-  height: 100vh;
-}
-
-.project1 {
-  padding-top: 10vh;
-}
-
-/* Style for the project gifs */
-.gif-container {
-  display: flex;
-  justify-content: center;
-}
-
-.styled-gif {
-  width: 60vw; /* Adjust width as needed */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Add border radius for rounded corners */
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add a shadow effect */
-  margin: 10px; /* Add some margin */
-}
-
-/* Style for contact section */
 .contact {
   height: 100vh;
   display: flex;
@@ -108,27 +69,56 @@ p {
   align-items: center; /* Vertically center items */
   flex-direction: column; /* Arrange items in a column */
 }
-
-
 .email {
   text-align: center;
 }
-
 .email h3,
 .email h4 {
   margin: 0; /* Remove default margins */
 }
-
 /* Contact Icons */
 .ContactIcons {
   padding-top: 10vh; /* Adjust vertical padding as needed */
 }
-
 .ContactIcons a {
   margin: 0 10px; /* Adjust the margin between icons */
 }
-
 .ContactIcons img {
   width: 50px; /* Adjust the size of the icons */
   height: auto; /* Maintain aspect ratio */
+}
+
+
+/* ***************************************************************************** */
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .LandingPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure items are spaced apart */
+    align-items: center;
+  }
+
+  header {
+    width: 100vw;
+    height: 5vh;
+    padding: 10px; /* Adjust padding for better spacing */
+  }
+
+  .Logo {
+    font-size: 8vw;
+    margin-left: 10px; /* Adjust margin for spacing */
+  }
+
+  .NavigationBar {
+    display: flex;
+    flex-direction: row;
+    margin-right: 10px; /* Add some space from the right */
+  }
+
+  .NavigationBar a {
+    text-decoration: none;
+    margin-left: 20px; /* Add space between links */
+    color: black;
+  }
 }
