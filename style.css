@@ -95,7 +95,6 @@ h4 {
   .LandingPage {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Ensure items are spaced apart */
     align-items: center;
   }
 
@@ -103,11 +102,11 @@ h4 {
     width: 100vw;
     height: 5vh;
     padding: 10px; /* Adjust padding for better spacing */
+    align-items: space-between;
   }
 
   .Logo {
-    font-size: 8vw;
-    margin-left: 10px; /* Adjust margin for spacing */
+    font-size: 60px;
   }
 
   .NavigationBar {
