@@ -1,223 +1,221 @@
-/* Font */
 @font-face {
-  font-family: 'Just Me Again Down Here';
-  src: url('fonts/JustMeAgainDownHere-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Montserrat-Regular';
+  src: url('fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
-body {
-  background-color: white;
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
 }
 
-.about,
-.projects,
-.contact {
-  padding-left: 10vw; /* Adjust as needed to ensure content is below the header */
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+}
+::selection {
+  background-color: yellow;
 }
 
-/* ***************************************************************************** */
-/* Style for the Landing Page section */
+/* **************************************************************************** */
+/* Styles for the header */
 header {
-  top: 0;
+  position: fixed; /* Make the header fixed */
+  top: 0; /* Align the header to the top of the viewport */
+  left: 10vw; /* Align the left edge of the header to the left edge of the viewport */
+  right: 10vw; /* Align the right edge of the header to the right edge of the viewport */
+  display: flex;
+  justify-content: space-between; /* Aligns items with space in between */
+  align-items: center; /* Vertically centers items */
+  padding: 20px;
+  background-color: white;
+  font-family: 'Montserrat-Regular', sans-serif; /* Apply Montserrat-Regular font */
+  z-index: 1000; /* Ensure the header is on top of other content */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+#projects, #about, #contact {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  scroll-behavior: smooth;
+}
+html, body {
+  scroll-behavior: smooth;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
   left: 0;
-  position: fixed; /* Set the position to fixed */
-  width: 5vw;
-  height: 100%;
-  background-color: rgb(245, 245, 240);
-  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
-  padding: 20px; /* Add padding around the items inside the header */
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Set the direction to column */
-  align-items: center; /* Center horizontally */
+  width: 0;
+  height: 3px;
+  background-color: blue; /* Change the color as needed */
+  transition: width 0.3s ease;
 }
 
-/* Style for the NavigationBar */
-.NavigationBar {
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Change the direction to column */
-  font-family: 'PT Serif', sans-serif;
-  font-size: 12px;
-  margin-top: 20px; /* Adjust the margin to create space between the logo and navigation bar */
+.nav-link.active::after {
+  width: 100%;
 }
 
-/* Remove margin-right for the links */
-.NavigationBar a {
-  text-decoration: none; /* Remove underlines from links */
-  margin-bottom: 10px; /* Add some spacing between links */
-  color: black; /* Set the text color */
-}
-
-/* Style for the Name */
-.Logo {
-  font-family: 'Just Me Again Down Here';
-  font-size: 120px; /* Adjust the font size */
-  font-weight: bold; /* Make the text bold */
-  margin-top: -50px;
-  margin-bottom: -40px; /* Move the logo up slightly */
-}
-/* ***************************************************************************** */
-/* Style for About section */
-.about {
+/* **************************************************************************** */
+/* Styles for the home section */
+#home {
+  position: relative; /* Set position to relative to serve as a reference for absolute positioning */
+  height: 100vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  padding-top: 20vh;
-  padding-left: 20vw;
-  padding-right: 40vw;
+  font-family: 'Montserrat-Bold', sans-serif;
+  font-size: 4vw;
 }
 
-.introduction {
-  margin-bottom: 50px;
+#home img {
+  position: absolute; /* Position the images absolutely */
 }
-.introduction p {
+
+#heart {
+  width: 10vw;
+  height: auto;
+  top: 56%; /* Adjust top position as needed */
+  left: 14%; /* Adjust left position as needed */
+  z-index: -1; /* Set z-index to a negative value to position it behind other elements */
+}
+
+#heart-transparent {
+  border-color: black;
+  border-width: 10px;
+  width: 10vw;
+  height: auto;
+  top: 56%; /* Adjust top position as needed */
+  left: 14%; /* Adjust left position as needed */
+}
+
+#star {
+  width: 3vw;
+  height: auto;
+  top: 29%; /* Adjust top position as needed */
+  left: 18%; /* Adjust left position as needed */
+}
+
+#pc {
+  width: 17vw;
+  height: auto;
+  top: 23%; /* Adjust top position as needed */
+  left: 65%; /* Adjust left position as needed */
+}
+
+.portfolio-img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease; /* Add a transition for smooth effect */
+}
+
+.portfolio-img:hover {
+  transform: scale(1.1); /* Scale up the image on hover */
+}
+
+/* Define a keyframe animation for continuous rotation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Start rotation from 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Rotate to 360 degrees (one full circle) */
+  }
+}
+
+/* Apply the rotation animation to the star image */
+#star {
+  width: 3vw;
+  height: auto;
+  top: 29%; /* Adjust top position as needed */
+  left: 18%; /* Adjust left position as needed */
+  animation: rotate 5s linear infinite; /* Apply the rotation animation */
+}
+
+/* **************************************************************************** */
+/* Styles for the project section */
+#project {
+  margin-top: 20vh;
+}
+
+/* **************************************************************************** */
+/* Styles for the about section */
+#about {
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Horizontally center the items */
+}
+
+
+body p {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-size: 25px;
+  text-align: left;
+}
+
+/* **************************************************************************** */
+/* Styles for the contact section */
+#contact{
+  height: 50vh;
+  justify-content: center; /* Horizontally center the items */
+}
+body h2 {
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  font-size: 35px;
+}
+body h3 {
+  font-family: 'Montserrat-Regular', sans-serif;
   font-size: 25px;
 }
 
-#downloadLink {
-  /* Text color */
-  color: black; /* Example color */
-
-  /* Background color */
-  background-color: rgb(245, 245, 240); /* Example color */
-  
-  /* Padding */
-  padding: 10px 20px; /* Adjust padding as needed */
-  
-  /* Border */
-  border: 2px solid rgb(245, 245, 240); /* Example border color */
-  border-radius: 10px; /* Rounded corners */
-  
-  /* Text decoration */
-  text-decoration: none; /* Remove underline */
-  
-  /* Hover effect */
-  transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-#downloadLink:hover {
-  background-color: rgb(245, 245, 240); /* Example color */
-  border-color: #0056b3; /* Example border color */
-}
-
-.skills {
-  margin-top: 100px; /* Adjust the margin as needed */
-}
-
-.SkillsIcons {
-  display: flex; /* Use flexbox */
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-}
-
-.SkillsIcons p {
-  /* Text color */
-  color: #ffffff; /* Example color */
-
-  /* Background color */
-  background-color: #007bff; /* Example color */
-  
-  /* Padding */
-  padding: 5px 10px; /* Adjust padding as needed */
-  
-  /* Border */
-  border: 2px solid #007bff; /* Example border color */
-  border-radius: 5px; /* Rounded corners */
-  
-  /* Margin between skill items */
-  margin-right: 10px; /* Adjust margin as needed */
-  margin-bottom: 10px; /* Adjust margin as needed */
-  
-  /* Text decoration */
-  text-decoration: none; /* Remove underline */
-  
-  /* Hover effect */
-  transition: background-color 0.3s ease; /* Smooth transition */
-}
-
-.SkillsIcons p:hover {
-  background-color: #0056b3; /* Example color */
-  border-color: #0056b3; /* Example border color */
-}
-
-
-/* ***************************************************************************** */
-/* Style for contact section */
-h3, h4 {
-  font-family: 'PT Serif', sans-serif;
-  color: "black";
-}
-h3 {
-  font-size: 30px;
-}
-h4 {
-  font-size: 50px;
-}
-.contact {
-  height: 100vh;
-  display: flex;
-  justify-content: center; /* Horizontally center items */
-  align-items: center; /* Vertically center items */
-  flex-direction: column; /* Arrange items in a column */
-}
-.email {
-  text-align: center;
-}
-.email h3,
-.email h4 {
-  margin: 0; /* Remove default margins */
-}
-/* Contact Icons */
 .ContactIcons {
-  padding-top: 10vh; /* Adjust vertical padding as needed */
+  display: flex; /* Use flexbox */
 }
+
 .ContactIcons a {
-  margin: 0 10px; /* Adjust the margin between icons */
+  margin-right: 20px; /* Add some space between the icons */
 }
+
 .ContactIcons img {
-  width: 50px; /* Adjust the size of the icons */
+  width: 50px; /* Set the width of the icons */
   height: auto; /* Maintain aspect ratio */
-  transition: transform 0.3s ease; /* Add transition for hover effect */
 }
-.ContactIcons img:hover {
-  transform: scale(1.1); /* Scale the icon on hover for a subtle effect */
-}
-/* ***************************************************************************** */
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  h3 {
-    font-size: 20px;
-  }
-  h4 {
-    font-size: 30px;
-  }
-
-  .about,
-  .projects,
-  .contact {
-    padding-top: 10vh; /* Adjust as needed to ensure content is below the header */
-    padding-left: 0;
-  }
-
-  header {
-    width: 100vw;
-    height: 5vh;
-    padding: 10px; /* Adjust padding for better spacing */
-    display: flex; /* Use flexbox */
-    flex-direction: row; /* Arrange items in a row */
-    justify-content: space-between; /* Align items to the start and end */
-    align-items: center; /* Vertically center items */
-  }
-
-  .Logo {
-    font-size: 60px;
-  }
-
-  .NavigationBar {
-    display: flex; /* Use flexbox */
-    flex-direction: row; /* Arrange items in a row */
-  }
-
-  .NavigationBar a {
-    text-decoration: none;
-    margin-right: 20px; /* Add space between links */
-    color: black;
-  }
+/* **************************************************************************** */
+/* Styles for the footer */
+footer {
+  display: flex;
+  padding-left: 10vw;
+  align-items: center; /* Vertically center the content */
 }

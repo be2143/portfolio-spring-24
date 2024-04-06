@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buka-Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buka Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <!-- Navigation bar -->
-    <div class="Logo">.b</div>
-    <div class="NavigationBar">
-        <a href="#about">ABOUT</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-    </div>
-  </header>
-  <!-- About Section -->
-  <section class="about">
-    <div class="introduction">
-      <p>Hi, I'm Buka! I'm a Computer Science and Interactive Media Student at New York University Abu Dhabi.</p>
-      <p>My mission? Keep things fresh and fun! Whether I'm coding up a storm or dreaming up the next big thing, I'm all about bringing a bit of flair and creativity to everything I do. Let's make some magic happen!</p>
-    </div>
-    <a id="downloadLink" href="#" download="resume.pdf">Resume</a>
-    <div class="skills">
-      <h3>Skills</h3>
-      <div class="SkillsIcons">
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>Javascript</p>
-        <p>Git/Github</p>
-        <p>Python</p>
-        <p>C/C++</p>
-        <p>Figma</p>
-      </div>
-    </div>
-  </section>
-  <!-- Project Section -->
-  <section class="projects">
-    <div class="project1"></div>
-    <div class="project2"></div>
-    <div class="project3"></div>
-    <div class="project3"></div>
-  </section>
-  <!-- Contact Section -->
-  <section class="contact">
-    <div class="email">
-      <h3>let's get in touch!</h3>
-      <h4><a href="mailto:be2143@nyu.edu" style="text-decoration: none; color: black;">be2143@nyu.edu</a></h4>
-    </div>
-    <div class="ContactIcons">
-        <a href="https://www.linkedin.com/in/buka-e/" target="_blank"><img src="images/linkedin.png" alt="Contact 1"></a>
-        <a href="https://github.com/buka-e" target="_blank"><img src="images/github.png" alt="Contact 2"></a>
-        <a href="https://instagram.com/buka3018/" target="_blank"><img src="images/instagram.png" alt="Contact 3"></a>
-    </div>
-  </section>
-  <footer>
-    <!-- <p>This site is an ongoing archive of my work. No trackers or analytics are being used.</p> -->
-  </footer>
-  <script src="script.js" defer></script>
+    <header>
+      <p id="home-link">Buka Enkhjargal</p>
+      <nav>
+          <ul>
+              <li><a href="#projects" class="nav-link">Projects</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <section id="home">
+      <h1>Curious<br>programmer,<br>
+        design enthusiast,<br>
+        lifelong learner</h1>
+      <img src="images/heart.png" alt="Heart" id="heart" class="portfolio-img">
+      <img src="images/heart-transparent.png" alt="Heart-transparent" id="heart-transparent" class="portfolio-img">
+      <img src="images/star.png" alt="Star" id="star" class="portfolio-img">
+      <img src="images/PC.png" alt="PC" id="pc" class="portfolio-img">
+      </section>
+      
+    </section>
+
+    <section id="projects">
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1 goes here.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2 goes here.</p>
+        </div>
+        <div class="project">
+          <h3>Project 3</h3>
+          <p>Description of Project 3 goes here.</p>
+        </div>
+    </section>
+
+    <section id="about">
+      <p>Hi, I'm Buka! I'm a Computer Science and<br>Interactive Media Student at New York<br>University Abu Dhabi.</p>
+      <p>My mission? Keep things fresh and fun!<br>Whether I'm coding up a storm or<br>dreaming up the next big thing, I'm all<br>about bringing a bit of flair and creativity<br>to everything I do.</p>
+      <a href="images/CV.pdf" download="CV.pdf">Download CV</a>
+    </section>
+
+    <section id="contact">
+        <h3>Let's connect!</h3>
+        <h2><a href="mailto:be2143@nyu.edu" style="text-decoration: none; color: black;">be2143@nyu.edu</a></h2>
+        <div class="ContactIcons">
+          <a href="https://www.linkedin.com/in/buka-e/" target="_blank"><img src="images/linkedin.png" alt="Contact 1" class="portfolio-img"></a>
+          <a href="https://github.com/buka-e" target="_blank"><img src="images/github.png" alt="Contact 2" class="portfolio-img"></a>
+          <a href="https://instagram.com/buka3018/" target="_blank"><img src="images/instagram.png" alt="Contact 3" class="portfolio-img"></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio</p>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
+
 </html>
