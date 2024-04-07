@@ -29,6 +29,7 @@ header {
   padding: 20px;
   background-color: white;
   font-family: 'Montserrat-Regular', sans-serif; /* Apply Montserrat-Regular font */
+  font-size: 17px;
   z-index: 1000; /* Ensure the header is on top of other content */
   box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
@@ -36,11 +37,6 @@ header {
 #projects, #about, #contact {
   padding-left: 10vw;
   padding-right: 10vw;
-}
-
-
-header h1 {
-  margin: 0;
 }
 
 nav {
@@ -165,8 +161,63 @@ nav ul li a {
 
 /* **************************************************************************** */
 /* Styles for the project section */
-#project {
-  margin-top: 20vh;
+body p {
+  font-family: 'Montserrat-Regular', sans-serif;
+  text-align: left;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column; /* Align projects as columns */
+  align-items: center; /* Center projects horizontally */
+  padding-top: 120px;
+}
+
+.project {
+  width: 80%; /* Adjust the width of each project as needed */
+  margin-bottom: 50px; /* Add space between projects */
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px; /* Make the border round */
+  transition: border-width 0.3s, box-shadow 0.3s; /* Add transitions for border-width and box-shadow */
+  font-size: 17px;
+  display: flex; /* Align project items as rows */
+}
+
+.project:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow on hover */
+}
+
+.project-image {
+  width: 30vw; /* Set width to 50vw */
+  display: flex; /* Align image and text as columns */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.project-image img {
+  width: 20vw;
+  height: auto;
+}
+
+.project-info {
+  width: 70vw; /* Set width to 50vw */
+  display: flex;
+  flex-direction: column; /* Align project info as column */
+  margin-left: 40px;
+}
+
+#projects h3{
+  margin-bottom: 0;
+}
+#projects p:first-of-type {
+  margin-top: 0; /* Adjust the margin to move the first paragraph closer to the header */
+}
+
+#projects p:last-of-type {
+  margin-top: auto; /* Set the second paragraph to the bottom of the project */
+  margin-right: 50px;
+  line-height: 1.7;
 }
 
 /* **************************************************************************** */
@@ -176,19 +227,13 @@ nav ul li a {
   display: flex;
   flex-direction: column; /* Stack items vertically */
   justify-content: center; /* Horizontally center the items */
-}
-
-
-body p {
-  font-family: 'Montserrat-Regular', sans-serif;
   font-size: 25px;
-  text-align: left;
 }
 
 /* **************************************************************************** */
 /* Styles for the contact section */
 #contact{
-  height: 50vh;
+  height: 60vh;
   justify-content: center; /* Horizontally center the items */
 }
 body h2 {
@@ -198,6 +243,11 @@ body h2 {
 body h3 {
   font-family: 'Montserrat-Regular', sans-serif;
   font-size: 25px;
+}
+
+body h4 {
+  font-family: 'Montserrat-Regular', sans-serif;
+  font-size: 17px;
 }
 
 .ContactIcons {
